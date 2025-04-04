@@ -1,9 +1,9 @@
-# 3D-Model-Viewer# 3D Model Viewer
+# 3D-Model-Viewer
 
 ## Overview
 The 3D Model Viewer is a lightweight application designed to load, display, and interact with 3D models. It provides an intuitive interface for users to explore 3D assets with ease. The application leverages **imGUI** for user interface controls and supports various 3D model formats.
 
-![Image of Plane](../docs/plane.png)
+![Image of Plane](./docs/Plane.png)
 
 ## Features
 - Load and render 3D models.
