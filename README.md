@@ -44,9 +44,9 @@ brew install cmake glfw assimp
 
 ## Usage Instructions
 ### Camera Controls
-Rotate Camera: Use mouse to move camera.
-Movement: WASD keys
-Zoom In/Out: Use the scroll wheel.
+- **Rotate Camera**: Use mouse to move camera.
+- **Movement**: WASD keys
+- **Zoom In/Out**: Use the scroll wheel.
 
 ### imGUI Settings
 - **Wireframe Mode**: Toggle between solid and wireframe rendering.
