@@ -10,12 +10,10 @@
 
 namespace UAV
 {
-// Settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
-// Global camera instance
-Camera camera(glm::vec3(0.0f, 0.0f, 3.0f)); // Position closer to see the model
+Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
@@ -25,7 +23,6 @@ bool mouseCaptured = false;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
-// GUI Controller for handling ImGui interface
 std::unique_ptr<GUIController> guiController = nullptr;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -153,7 +150,6 @@ int main()
     glm::vec3 lightPos(1.2f, 1.0f, 0.0f);
     glm::vec3 lightColor(1.0f, 1.0f, 1.0f);
     
-    // Main render loop
     while (!glfwWindowShouldClose(window)) 
     {
         float currentFrame = glfwGetTime();
@@ -167,7 +163,6 @@ int main()
 
         guiController->createGUIWindow();
 
-        // Set wireframe mode if enabled
         if (guiController->getControls().useWireframe)
             glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         else
@@ -201,7 +196,6 @@ int main()
         
         shader.setMat4("model", modelMatrix);
         
-        // Draw the model
         model.Draw(shader);
         
         guiController->render();

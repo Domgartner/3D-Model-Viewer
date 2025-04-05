@@ -8,12 +8,12 @@ class Shader
 {
 public:
     unsigned ID; // Shader program ID
-    // Constructor reads and builds the shader
+
     Shader(const char* vertexPath, const char* fragmentPath);
     // use/activate the shader
     void use();
 
-    // utility set functions
+    // utility
     void setBool(const std::string &name, const bool value) const;
     void setInt(const std::string &name, const int value) const;
     void setUnsigned(const std::string &name, const unsigned value) const;

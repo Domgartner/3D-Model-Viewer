@@ -12,7 +12,6 @@ enum Camera_Movement {
     RIGHT
 };
 
-// Default camera values
 const float YAW         = -90.0f;
 const float PITCH       =  0.0f;
 const float SPEED       =  2.5f;
@@ -35,19 +34,14 @@ public:
     float MouseSensitivity;
     float Zoom;
 
-    // Constructor with vectors
     Camera(glm::vec3 position = glm::vec3(0.0f, 0.0f, 3.0f), glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f), float yaw = YAW, float pitch = PITCH);
-    // Constructor with scalar values
     Camera(float posX, float posY, float posZ, float upX, float upY, float upZ, float yaw, float pitch);
 
     // Returns the view matrix calculated using Euler Angles and the LookAt Matrix
     glm::mat4 GetViewMatrix();
 
     void ProcessKeyboard(Camera_Movement direction, float deltaTime);
-
-    // Processes input received from a mouse input system.
     void ProcessMouseMovement(float xoffset, float yoffset, bool constrainPitch = true);
-
     void ProcessMouseScroll(float yoffset);
 
 private:

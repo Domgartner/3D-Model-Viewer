@@ -4,7 +4,6 @@ namespace UAV
 {
 GUIController::GUIController(GLFWwindow* window)
 {
-    // Initialize ImGui
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGui::StyleColorsDark();

@@ -23,21 +23,16 @@ public:
         bool useWireframe = false;
     };
     
-    // Constructor
     GUIController(GLFWwindow* window);
     
-    // Destructor to clean up ImGui
     ~GUIController();
     
-    // Create and render the GUI
     void createGUIWindow();
     
-    // Render ImGui frame
     void render();
 
     bool IsInitialized() const;
     
-    // Controls getter
     Controls& getControls() { return controls; }
     
 private:
